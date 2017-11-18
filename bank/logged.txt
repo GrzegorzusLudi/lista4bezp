@@ -1,0 +1,3 @@
+<a href="przelew.php">Wykonaj przelew</a> ·
+<a href="historia.php">Historia przelewów</a> ·
+<a href="logout.php">Wyloguj</a>

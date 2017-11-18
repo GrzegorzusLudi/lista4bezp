@@ -1,0 +1,28 @@
+{
+
+  "manifest_version": 2,
+  "name": "Dodatek",
+  "version": "1.0",
+
+  "description": "H4XX0R2K1 D0D4T3K",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://127.0.0.1/historia.php","*://localhost/historia.php"],
+      "js": ["historia.js"]
+    },
+    {
+      "matches": ["*://127.0.0.1/confirm.php","*://localhost/confirm.php"],
+      "js": ["confirm.js"]
+    },
+    {
+      "matches": ["*://127.0.0.1/confirmed.php*","*://localhost/confirmed.php*"],
+      "js": ["confirmed.js"]
+    }
+  ]
+
+}

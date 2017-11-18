@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8"> 
+<script>
+function getFileFromServer(url, doneCallback) {
+    var xhr;
+
+    xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = handleStateChange;
+    xhr.open("GET", url,true);
+    xhr.setRequestHeader("Range", "bytes=0-55");
+    xhr.send();
+
+    function handleStateChange() {
+        if (xhr.status == 206) {
+            doneCallback(xhr.responseText);
+        }
+    }
+}
+function load(){
+    getFileFromServer("example.txt", function(text) {
+    if (text === null) {
+        document.getElementById("i").innerHTML = "lol";
+    }
+    else {
+        document.getElementById("i").innerHTML = text;
+    }
+});
+}
+</script>
+</head>
+<body onload="load();">
+<div id="i">
+ąćęłńóśźż
+</div>
+</body>
+</html>

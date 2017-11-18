@@ -1,0 +1,2 @@
+<a href="login.php">Zaloguj</a> ·
+<a href="register.php">Zarejestruj</a>
